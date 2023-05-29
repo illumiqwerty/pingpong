@@ -38,6 +38,17 @@ class Player(GameSprite):
 game = True
 finish = False
 
+racket1 = Player('racket.png',15, 20, 200, 30, 100)
+racket2 = Player('racket.png',15, 630, 200, 30, 100)
+ball = GameSprite('tenis_ball.png', 20, 300, 200, 50, 50)
+while game:
+    window.blit(backround, (0,0))
+    racket1.update_r()
+    racket1.reset()
+    racket2.update_l()
+    racket2.reset()
+    ball.reset()
+
 while game:
     window.blit(backround, (0,0))
     for e in event.get():
